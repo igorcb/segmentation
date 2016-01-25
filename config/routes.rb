@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'new_contact'     => 'contacts#new'
 
-  #resources :contacts
+  resources :contacts
   
 end
