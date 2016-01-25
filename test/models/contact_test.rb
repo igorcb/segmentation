@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ContactTest < ActiveSupport::TestCase
 	def setup
-		@contact = Contact.new(name:'Igor Batista', email: "admin@admin.org", age: 30, state: 'Ceara', office: 1)
+		@contact = Contact.new(name:'Igor Batista', email: "admin@admin.org", age: 30, state: 'Ceara', office_id: 1)
 	end
 
 	test "should be valid" do
