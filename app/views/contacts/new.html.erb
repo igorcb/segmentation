@@ -18,11 +18,8 @@
     	<%= f.label :state  %>
     	<%= f.select( :state, select_state, {include_blank: "Select State"}, {class: "form-control"} ) %>      
 
-    	<%#= f.label :office  %>
-    	<%#= f.select( :office, select_office, {include_blank: "Select office"}, {class: "form-control"} ) %>      
-
       <%= f.label :office_id %>
-      <%= f.number_field :office_id, class: 'form-control' %>
+      <%= f.select(:office_id, Office.order(:name).collect {|o| [o.name, o.id]}, {include_blank: "Select Office"}, {class: "form-control"} ) %>
 
       <%= f.submit "Save", class: "btn btn-primary" %>
     <% end %>
