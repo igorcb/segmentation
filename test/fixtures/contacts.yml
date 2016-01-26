@@ -13,3 +13,10 @@ two:
   state: MyString
   age: 1
   office_id: 1
+
+igor:
+  name: Igor Batista
+  email: igor@admin.org
+  state: Ceará
+  age: 1
+  office_id: 1

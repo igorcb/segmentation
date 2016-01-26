@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ContactTest < ActiveSupport::TestCase
 	def setup
-		@contact = Contact.new(name:'Igor Batista', email: "admin@admin.org", age: 30, state: 'Ceara', office_id: 1)
+		@office = offices(:programador)
+		@contact = @office.contacts.build(name:'Igor Batista', email: "admin@admin.org", age: 30, state: 'Ceara')
 	end
 
 	test "should be valid" do
@@ -37,4 +38,9 @@ class ContactTest < ActiveSupport::TestCase
       assert @contact.valid?, "#{valid_address.inspect} should be valid"
     end
   end  
+
+  test "office id should be present" do
+    @contact.office_id = nil
+    assert_not @contact.valid?
+  end
 end
