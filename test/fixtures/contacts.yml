@@ -14,9 +14,24 @@ two:
   age: 1
   office_id: 1
 
+destroy_contact:
+  name: Delete
+  email: delete@admin.org
+  state: Ceara
+  age: 1
+  office_id: 1
+
 igor:
   name: Igor Batista
   email: igor@admin.org
   state: Ceará
   age: 1
   office_id: 1
+
+<% 60.times do |n| %>
+  name:  <%= "Contact #{n}" %>
+  email: <%= "contact-#{n}@admin.com" %>
+  age: <%= 30 %>
+  state: <%= "Ceará" %>
+  office_id: <%= 1 %>
+<% end %>

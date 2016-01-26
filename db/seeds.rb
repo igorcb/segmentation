@@ -18,3 +18,15 @@
 							   {name: "Funcionario"},
 							   {name: "Almoxarifado"}
 								])	
+
+	99.times do |n|
+  name  = Faker::Name.name
+  email = "segmentation-#{n+1}@admin.org"
+  state = 'Ceara'
+  office = Office.first
+  Contact.create!(name:  name,
+                  email: email,
+                  age: 30,
+                  state: 'Ceará',
+                  office: office)
+end
